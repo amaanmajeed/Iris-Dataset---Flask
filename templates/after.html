@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+            color: #333;
+        }
+        img {
+            display: block;
+            margin: 50px auto;
+            max-width: 100%;
+            height: auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        a {
+            width: fit-content;
+            /* margin-top: 20px; */
+            color: #333;
+            text-decoration: none;
+            border: 2px solid #333;
+            padding: 10px 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+        a:hover {
+            background-color: #333;
+            color: #fff;
+        }
+
+        img{
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Prediction</h1>
+        
+        {% if data == 0 %}
+        <h2>Iris-setosa</h2>
+        <img src="../static/setosa.jpg" alt="Iris Setosa">
+        
+        {% elif data == 1 %}
+        <h2>Iris-Vercicolor</h2>
+        <img src="../static/verci.jpg" alt="Iris Vercicolor">
+
+        {% else %}
+        <h2>Iris-Virginica</h2>
+        <img src="../static/flower1.jpg" alt="Iris Virginia">
+
+        {%endif%}
+
+        <a href="/">Back Home</a>
+    </div>
+</body>
+</html>

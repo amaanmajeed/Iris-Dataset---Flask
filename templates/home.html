@@ -1,0 +1,129 @@
+<html>
+<head>
+    <title>My Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+            color: #333;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+        label {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            color: #333;
+            width: 300px;
+        }
+        input[type="range"] {
+            width: 200px;
+            margin-left: 10px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        input[type="submit"]:hover {
+            background-color: #3e8e41;
+        }
+        input[type="button"] {
+            background-color: #008CBA;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        input[type="button"]:hover {
+            background-color: #006B9F;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to my website</h1>
+    <form method="POST" action="{{url_for('home')}}">
+        <div>
+            <label for="a">SepalLengthCm: </label>
+            <input type="range" name="a" min="4.3" max="7.9" value="6.1" step="0.1">
+            <input type="text" name="a_text" value="6.1">
+        </div>
+        <div>
+            <label for="b">SepalWidthCm: </label>
+            <input type="range" name="b" min="2.0" max="4.4" value="3.2" step="0.1">
+            <input type="text" name="b_text" value="3.2">
+        </div>
+        <div>
+            <label for="c">PetalLengthCm: </label>
+            <input type="range" name="c" min="1.0" max="6.9" value="3.95" step="0.1">
+            <input type="text" name="c_text" value="3.95">
+        </div>
+        <div>
+            <label for="d">PetalWidthCm: </label>
+            <input type="range" name="d" min="0.1" max="2.5" value="1.25" step="0.1">
+            <input type="text" name="d_text" value="1.25">
+        </div>
+        <input type="submit" name="submit" value="Submit">
+        <input type="button" name="button1" value="Sample 1" onclick="setValues1()">
+        <input type="button" name="button2" value="Sample 2" onclick="setValues2()">
+        <input type="button" name="button3" value="Sample 3" onclick="setValues3()">
+    </form>
+    <script>
+        function setValues1() {
+            document.getElementsByName("a")[0].value = 5.1;
+            document.getElementsByName("b")[0].value = 3.5;
+            document.getElementsByName("c")[0].value = 1.4;
+            document.getElementsByName("d")[0].value = 0.2;
+            document.getElementsByName("a_text")[0].value = 5.1;
+            document.getElementsByName("b_text")[0].value = 3.5;
+            document.getElementsByName("c_text")[0].value = 1.4;
+            document.getElementsByName("d_text")[0].value = 0.2;
+        }
+
+        function setValues2() {
+            document.getElementsByName("a")[0].value = 6.9;
+            document.getElementsByName("b")[0].value = 3.1;
+            document.getElementsByName("c")[0].value = 4.9;
+            document.getElementsByName("d")[0].value = 1.5;
+            document.getElementsByName("a_text")[0].value = 6.9;
+            document.getElementsByName("b_text")[0].value = 3.1;
+            document.getElementsByName("c_text")[0].value = 4.9;
+            document.getElementsByName("d_text")[0].value = 1.5;
+        }
+
+        function setValues3() {
+            document.getElementsByName("a")[0].value = 6.2;
+            document.getElementsByName("b")[0].value = 2.8;
+            document.getElementsByName("c")[0].value = 4.8;
+            document.getElementsByName("d")[0].value = 1.8;
+            document.getElementsByName("a_text")[0].value = 6.2;
+            document.getElementsByName("b_text")[0].value = 2.8;
+            document.getElementsByName("c_text")[0].value = 4.8;
+            document.getElementsByName("d_text")[0].value = 1.8;
+        }
+    </script>
+</body>
+</html>
